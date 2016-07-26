@@ -1,15 +1,12 @@
 package scp.model.domain;
 
 import java.io.Serializable;
-//import java.util.List;
-
 import javax.enterprise.inject.Model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-//import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 @Model
@@ -27,22 +24,11 @@ public class Fornecedor implements Serializable {
 	
 	@Column(name="nome", length=30, nullable=false)
 	private String nome;
-	/*
-	@OneToMany(mappedBy="fornecedor")
-	private List<Produto> produtos;
 	
-	public void setProdutos(List<Produto> produtos) {
-		this.produtos = produtos;
-	}
-	*/
 	public Fornecedor(){
 		
 	}
-	/*
-	public List<Produto> getProdutos() {
-		return produtos;
-	}*/
-	
+
 	public Fornecedor(Integer codigo, String nome) {
 		this.codigo = codigo;
 		this.nome = nome;
